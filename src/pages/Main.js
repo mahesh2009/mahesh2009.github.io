@@ -14,10 +14,6 @@ const Main = () => {
 				<div className="main-title-container">
 					<img class="img" src={safeprotest}></img>
 				</div>
-				<p className="main-text">
-					Keeping people safe during protests with live updates and info
-				</p>
-
 				<div className="main-btn-container">
 					<a className="main-btn" href="/login">
 						LOG IN
