@@ -2,6 +2,7 @@ import React from "react";
 import "./css/Main.css";
 import safeprotest from "./img/safe-protests.png";
 import or from "./img/or.png";
+import ReactDOM from 'react-dom'
 
 const Main = () => {
 	return (
