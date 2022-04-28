@@ -2,9 +2,11 @@ import React from "react";
 import "./css/Main.css";
 import safeprotest from "./img/safe-protests.png";
 import or from "./img/or.png";
-import ReactDOM from 'react-dom'
+import { Timeline } from 'react-twitter-widgets'
+
 
 const Main = () => {
+
 	return (
 		<div>
 			<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
@@ -30,21 +32,15 @@ const Main = () => {
 
 				
 			</div>
-			<iframe 
-					style={{maxWidth:640, width:'100%', height:this.state.iFrameHeight, overflow:'visible'}}
-					onLoad={() => {
-						const obj = ReactDOM.findDOMNode(this);
-						this.setState({
-							"iFrameHeight": '20000px'
-						});
-					}} 
-					ref="iframe" 
-					src="https://protests.watchdog.team/heatmap"
-					width="100%" 
-					height={this.state.iFrameHeight} 
-					scrolling="no" 
-					frameBorder="0"
-					/>
+			<Timeline
+				dataSource={{
+					sourceType: 'profile',
+					screenName: 'elearnerlk'
+				}}
+				options={{
+					height: '400'
+				}}
+				/>
 				<p className="text">
 				<h1 className="title">
 					About Safe Protests <br/>

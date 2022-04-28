@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import "./css/form.scss";
+import ReactDOM from 'react-dom'
 
 class Login extends Component {
 	constructor(props) {
@@ -126,6 +127,21 @@ class Login extends Component {
 					<Link to="/registration" className="btn btn-link">
 						<div>Create Account</div>
 					</Link>
+					<iframe 
+                    style={{maxWidth:640, width:'100%', height:this.state.iFrameHeight, overflow:'visible'}}
+                    onLoad={() => {
+                        const obj = ReactDOM.findDOMNode(this);
+                        this.state = {
+                            "iFrameHeight": '20000px'
+                        };
+                    }} 
+                    ref="iframe" 
+                    src="https://protests.watchdog.team/heatmap"
+                    width="100%" 
+                    height={this.state.iFrameHeight} 
+                    scrolling="no" 
+                    frameBorder="0"
+                    />
 				</div>
 				</div>
 			);
