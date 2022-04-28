@@ -1,8 +1,13 @@
 import React from "react";
 import "./css/Main.css";
 import safeprotest from "./img/safe-protests.png";
+import protestSi from "./img/protest-si.png";
+import protestEn from "./img/protest-en.png";
+import protestTm from "./img/protest-tm.png";
+import raisedHand from "./img/raised-hand.jpeg"
 import or from "./img/or.png";
-import { Timeline } from 'react-twitter-widgets'
+import { Timeline } from 'react-twitter-widgets';
+import Stories from 'react-insta-stories'
 
 const Main = () => {
 
@@ -11,15 +16,15 @@ const Main = () => {
 			<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
 			<div className="main-body">
 				<div className="main-title-container">
-					<img class="img" src={safeprotest}></img>
+					<img class="img" src={protestSi}></img>
+					<img class="img" src={protestEn}></img>
+					<img class="img" src={protestTm}></img>
 				</div>
 				<div className="main-btn-container">
 					<a className="main-btn" href="/login">
-						Log in
+						<img class="img" src={raisedHand} width="120" height="80"></img><br/>
+						Log in &nbsp; &nbsp; &nbsp; 
 					</a>
-					<div className="or-container">
-						<img class="img" src={or}></img>
-					</div>
 					<a href="/registration" className="main-btn">
 						Register
 					</a>
@@ -30,6 +35,20 @@ const Main = () => {
 
 				
 			</div>
+			
+			<Stories 
+					stories={[{ url: 'https://cdn.newsfirst.lk/english-uploads/2022/04/762eb327-whatsapp-image-2022-04-09-at-4.12.40-pm.jpeg',  header: { heading: '#Gall face protest', subheading: 'Posted 5h ago', profileImage: 'https://www.dailynews.lk/sites/default/files/news/2019/10/11/z_p-10-gallle-face.jpg' } }, 
+					{ url: 'https://i2.wp.com/nasheman.in/wp-content/uploads/2018/09/SRI_LANKA_HUMAN_RIGHTS.jpg', header: { heading: '#1,000+ unions goes on strike', subheading: 'Posted 32m ago', profileImage: 'https://www.asianews.it/files/img/SRI_LANKA_-_0521_-_Proteste_1.jpg' } }, 
+					{ url: 'https://www.newscutter.lk/wp-content/uploads/2022/04/F1A222D4-9D88-437B-87F8-EB817801D2B2.jpeg', header: { heading: '#Major cities joins Galle Face occupants from Jaffna to Matara', subheading: 'Posted 32m ago', profileImage: 'https://cdn.bignewsnetwork.com/ani1650075279.jpg' } }, 
+					{ url: 'https://media.npr.org/assets/img/2022/04/06/ap22095409593951-ca77db4cc69871b1ae3166ddd86dbb9bde55cc57-s1600-c85.webp', header: { heading: '#Religious leaders joins the protest against government', subheading: 'Posted 32m ago', profileImage: 'https://cdn.bignewsnetwork.com/ani1650075279.jpg' }}, 
+					{ url: 'https://cdn.newsfirst.lk/english-uploads/2021/06/a5127e04-farmer-protest.jpg', header: { heading: '#Farmers demands for fertilizers, high living and material costs', subheading: 'Posted 32m ago', profileImage: 'https://cdn.bignewsnetwork.com/ani1650075279.jpg' } }, 
+					{ url: 'https://video.twimg.com/ext_tw_video/1519582995086143488/pu/vid/490x270/ZNUL3fiNQvPqilPz.mp4?tag=12', type: 'video' }, 'https://akm-img-a-in.tosshub.com/indiatoday/images/bodyeditor/202204/gfx_1-x1280.jpeg?UEf5C4yZeA6CbKvpcWytNGkvFh5ObDeX']
+				}
+					defaultInterval={1500}
+					width={432}
+					height={768}
+					/>
+
 			<Timeline
 				dataSource={{
 					sourceType: 'profile',
@@ -58,7 +77,6 @@ const Main = () => {
 					a participant's last location if something goes wrong.
 					
 				</p>
-				<img src="https://media4.s-nbcnews.com/j/newscms/2020_26/3392396/200624-blm-protest-jm-1402_cbd89c5bb57ab5b92c133713bac6adab.fit-760w.jpg" style={{float: 'center', marginBottom: '100px', marginTop: "0px"}} alt="Mlk"></img>
 			</p>
 		</div>
 	);
