@@ -128,21 +128,6 @@ class Login extends Component {
 						<div>Create Account</div>
 					</Link>
 				</div>
-					<iframe 
-					style={{maxWidth:640, width:'100%', height:this.state.iFrameHeight, overflow:'visible'}}
-					onLoad={() => {
-						const obj = ReactDOM.findDOMNode(this);
-						this.setState({
-							"iFrameHeight": '20000px'
-						});
-					}} 
-					ref="iframe" 
-					src="https://protests.watchdog.team/heatmap"
-					width="100%" 
-					height={this.state.iFrameHeight} 
-					scrolling="no" 
-					frameBorder="0"
-					/>
 				</div>
 			);
 		}
