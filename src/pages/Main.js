@@ -4,7 +4,6 @@ import safeprotest from "./img/safe-protests.png";
 import or from "./img/or.png";
 import { Timeline } from 'react-twitter-widgets'
 
-
 const Main = () => {
 
 	return (
@@ -16,13 +15,16 @@ const Main = () => {
 				</div>
 				<div className="main-btn-container">
 					<a className="main-btn" href="/login">
-						LOG IN
+						Log in
 					</a>
 					<div className="or-container">
 						<img class="img" src={or}></img>
 					</div>
 					<a href="/registration" className="main-btn">
-						REGISTER
+						Register
+					</a>
+					<a href="https://protests.watchdog.team/heatmap" className="main-btn">
+						Protest Heat Map
 					</a>
 				</div>
 
